@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <style>
+        body, #wrapper {
+            width: 800px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+       main {
+           background-color: cadetblue;
+       }
+
+       div{
+           float: left;
+       }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>SKITBRA MEMORY</h1>
+    <main>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div>
+        <div><img th:src="@{${link1}}"/></div></main>
+    <p th:text="@{greeting}"></p>
+</div>
+</body>
+</html>
