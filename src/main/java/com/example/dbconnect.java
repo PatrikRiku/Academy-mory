@@ -17,6 +17,9 @@ public class dbconnect implements dbconnectrep {
 
     @Override
     public List<String> getImgUrl() {
+
+
+
         try (Connection conn = dataSource.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT url FROM dbo.images")) {
@@ -28,6 +31,8 @@ public class dbconnect implements dbconnectrep {
             return urls;
         }
     }
+
+
 
 //    private List<String> rsBlog(ResultSet rs) throws SQLException {
 //        return new Blog(rs.getLong("id"), rs.getString("title"));

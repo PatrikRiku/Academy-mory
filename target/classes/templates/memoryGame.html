@@ -2,46 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
-    <style>
-        body, #wrapper {
-            width: 800px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0;
-            margin: 0 auto;
-        }
+    <title>ACADEMY-MORY</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet" />
+    <LINK href="styles.css" rel="stylesheet" type="text/css" />
 
-       main {
-           background-color: cadetblue;
-       }
-
-       div{
-           float: left;
-       }
-
-        #wrapper {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
 </head>
 <body>
 <div id="wrapper">
-    <h1>SKITBRA MEMORY</h1>
+    <h1>ACADEMY-MORY</h1>
     <main>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div>
-        <div><img th:src="@{${link1}}"/></div></main>
-    <p th:text="@{greeting}"></p>
+        <div th:each="linklink : ${link1}" class="divdiv"><img th:src="@{${linklink}}"/></div>
+
+    </main>
 </div>
+<script src="game.js"></script>
 </body>
 </html>
