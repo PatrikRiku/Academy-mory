@@ -10,7 +10,7 @@ body, #wrapper {
 }
 
 main {
-    background-color: cadetblue;
+    background-color: #abbfbf;
     width: 1250px;
     margin: 0 auto;
     padding: 10px;
@@ -29,7 +29,7 @@ h1 {
     font-size: 3em;
     text-align: center;
     font-family: 'Baloo Bhaina', cursive;
-    text-shadow: 2px 2px cadetblue;
+    text-shadow: 2px 2px #00aa3c;
     margin: 0 auto;
     float: left;
 }
@@ -52,8 +52,10 @@ span{
     background-size: contain;
     color: #FFFFFF;
     font-weight: bold;
-    width: 7.1em;
+    width: 7.2em;
     height: 8em;
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
 }
 
 #wrapper {

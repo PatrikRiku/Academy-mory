@@ -4,21 +4,13 @@
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
-
+var numberOfClicks = 0;
 function clickTime(divid, image_pk, boardSize) {
-    //setTimeout(window.location.reload.bind(window.location), 200);
-    //document.getElementById('objekt').style.display = "none";
 
-
-    // alert("divid " + divid);
-    // alert("image_pk " + image_pk);
-    // alert("boardsize " + boardSize);
-    //
-    //var FullShuffledBoard = boardSize;
 
     if (memory_values.length <2) {
-        document.getElementById(divid).style.visibility = "hidden";
-
+        document.getElementById(divid).style.opacity = 0;
+        numberOfClicks += 1;
         if (memory_values.length == 0) {
             memory_values.push(image_pk);
             memory_tile_ids.push(divid);
@@ -33,15 +25,15 @@ function clickTime(divid, image_pk, boardSize) {
                 // Check to see if the whole board is cleared
                 if (tiles_flipped == boardSize) {
                     function winner() {
-                        alert("We did it TEAM!");
+                        alert("We did it TEAM!\n You did it on: " + numberOfClicks + " tries");
                         window.location.reload()
-                    } setTimeout(winner, 1000);
+                    } setTimeout(winner, 3000); 
 
                 }
             } else {
                 function flip2Back() {
-                    document.getElementById(memory_tile_ids[0]).style.visibility = "visible";
-                    document.getElementById(memory_tile_ids[1]).style.visibility = "visible";
+                    document.getElementById(memory_tile_ids[0]).style.opacity = 1;
+                    document.getElementById(memory_tile_ids[1]).style.opacity = 1;
                     // Flip the 2 tiles back over
                     // var tile_1 = document.getElementById(memory_tile_ids[0]);
                     // var tile_2 = document.getElementById(memory_tile_ids[1]);
@@ -53,13 +45,9 @@ function clickTime(divid, image_pk, boardSize) {
                     memory_values = [];
                     memory_tile_ids = [];
                 }
-                setTimeout(flip2Back, 700);
+                setTimeout(flip2Back, 1000);
             }
         }
     }
 }
 
-
-function memoryFlipTile(tile, val) {
-
-}
