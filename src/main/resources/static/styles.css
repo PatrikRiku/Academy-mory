@@ -30,7 +30,12 @@ h1 {
     text-align: center;
     font-family: 'Baloo Bhaina', cursive;
     text-shadow: 2px 2px cadetblue;
-    margin: 0;
+    margin: 0 auto;
+    float: left;
+}
+
+span{
+    margin: 0 auto;
 }
 
 .divdiv {
@@ -54,4 +59,10 @@ h1 {
 #wrapper {
     display: flex;
     flex-direction: column;
+}
+
+img#academylogo {
+    width: 250px;
+    height: 100px;
+    float: left;
 }

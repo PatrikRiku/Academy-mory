@@ -35,7 +35,7 @@ public class dbconnect implements dbconnectrep {
 
         try (Connection conn = dataSource.getConnection();
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT image_pk, url, termin, first_name, last_name FROM dbo.images")) {
+             ResultSet rs = stmt.executeQuery("SELECT image_pk, url, termin, first_name, last_name FROM dbo.images WHERE termin = 'VT17'")) {
             List<Card> cards = new ArrayList<>();
             while (rs.next()) cards.add(rsCard(rs));
             return cards;

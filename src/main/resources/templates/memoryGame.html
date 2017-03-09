@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <h1>ACADEMY-MORY</h1>
+    <span><img id="academylogo" src="Academy_250x100.png" /><h1>-MORY</h1></span>
     <main>
         <div th:each="linklink : ${link1}" class="divdiv">
             <div th:onclick="'javascript:clickTime(this.id, ' + ${linklink.image_pk} + ',' + ${boardSize}+')'" th:id="${linklink.card_id}" class="bgbild"></div>

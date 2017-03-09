@@ -50,7 +50,7 @@ public class AcademyMoryApplication {
         Card[] randCardBoard = getRandomCard(fullCards);
 
         for(int i=0;i<fullCards.size();i++){
-            fullCards.get(i).card_id = Integer.toString(i+100);
+            fullCards.get(i).card_id = Integer.toString(i+10000);
             System.out.println("primkey " + fullCards.get(i).image_pk + " i-värde" + i + " namn " + fullCards.get(i).first_name + " memcard ID " + fullCards.get(i).card_id);
         }
 
