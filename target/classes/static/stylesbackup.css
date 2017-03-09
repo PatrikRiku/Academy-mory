@@ -35,20 +35,20 @@ h1 {
 
 .divdiv {
     float: left;
-    position: relative;
 }
 
 .bgbild{
     float: left;
     position: absolute;
-    padding: 0;
+    left: 0px;
+    top: 0px;
     z-index: 1000;
     background: url(flippedimg.png) no-repeat;
-    background-size: contain;
+    padding: 5px;
     color: #FFFFFF;
     font-weight: bold;
-    width: 7.1em;
-    height: 8em;
+    width: 100px;
+    height: 100px;
 }
 
 #wrapper {

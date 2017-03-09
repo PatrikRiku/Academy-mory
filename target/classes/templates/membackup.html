@@ -12,7 +12,7 @@
     <h1>ACADEMY-MORY</h1>
     <main>
         <div th:each="linklink : ${link1}" class="divdiv">
-            <div th:onclick="'javascript:clickTime(this.id, ' + ${linklink.image_pk} + ',' + ${boardSize}+')'" th:id="${linklink.card_id}" class="bgbild"></div>
+            <div th:onclick="'javascript:clickTime(this.id, ' + ${linklink.image_pk} + ')'" id="${linklink.image_pk}" class="bgbild"></div>
             <img th:id="@{${linklink.image_pk}}" th:src="@{${linklink.url}}"/>
         </div>
         <!-- <img th:src="@{${linklink}}"/> -->

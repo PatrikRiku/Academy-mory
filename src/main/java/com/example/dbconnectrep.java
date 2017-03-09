@@ -7,6 +7,7 @@ import java.util.List;
  */
 public interface dbconnectrep {
     List<String> getImgUrl();
+
 //        List<Blog> listBlogs();
 //        Blog getBlog(long blogId);
 //        List<Post> getEntriesIn(Blog blog);

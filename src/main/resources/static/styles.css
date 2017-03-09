@@ -1,6 +1,6 @@
 body, #wrapper {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -15,12 +15,14 @@ main {
     margin: 0 auto;
     padding: 10px;
     border-radius: 5px;
+    position: relative;
 }
 
 img {
     width: 7em;
     height: 7em;
     padding: 0.8px;
+    z-index: -1;
 }
 
 h1 {
@@ -33,6 +35,20 @@ h1 {
 
 .divdiv {
     float: left;
+    position: relative;
+}
+
+.bgbild{
+    float: left;
+    position: absolute;
+    padding: 0;
+    z-index: 1000;
+    background: url(flippedimg.png) no-repeat;
+    background-size: contain;
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 7.1em;
+    height: 8em;
 }
 
 #wrapper {
