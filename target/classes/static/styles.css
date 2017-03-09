@@ -38,6 +38,10 @@ span{
     margin: 0 auto;
 }
 
+footer{
+    text-align: center;
+}
+
 .divdiv {
     float: left;
     position: relative;

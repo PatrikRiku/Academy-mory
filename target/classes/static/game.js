@@ -10,7 +10,7 @@ function clickTime(divid, image_pk, boardSize) {
 
     if (memory_values.length <2) {
         document.getElementById(divid).style.opacity = 0;
-        numberOfClicks += 2;
+        numberOfClicks += 1;
         if (memory_values.length == 0) {
             memory_values.push(image_pk);
             memory_tile_ids.push(divid);
@@ -25,9 +25,9 @@ function clickTime(divid, image_pk, boardSize) {
                 // Check to see if the whole board is cleared
                 if (tiles_flipped == boardSize) {
                     function winner() {
-                        alert("We did it TEAM!\n You clicked: " + numberOfClicks + " times");
+                        alert("We did it TEAM!\n You did it on: " + numberOfClicks + " tries");
                         window.location.reload()
-                    } setTimeout(winner, 3000);
+                    } setTimeout(winner, 3000); 
 
                 }
             } else {
