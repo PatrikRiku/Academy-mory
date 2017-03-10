@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ACADEMY-MORY</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet"/>
+    <LINK href="styles.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <span><img id="academylogo" src="Academy_250x100.png" /><h1>-MORY</h1></span>
+    <main>
+        <div th:each="linklink : ${link1}" class="divdiv">
+            <div th:onclick="'javascript:clickTime(this.id, ' + ${linklink.image_pk} + ',' + ${boardSize}+')'" th:id="${linklink.card_id}" class="bgbild"></div>
+            <img th:id="@{${linklink.image_pk}}" th:src="@{${linklink.url}}"/>
+        </div>
+        <!-- <img th:src="@{${linklink}}"/> -->
+
+    </main>
+    <footer><p>© Awesome Team</p></footer>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
